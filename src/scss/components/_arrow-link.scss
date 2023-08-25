@@ -1,0 +1,30 @@
+.arrow-link {
+	display: block;
+	width: 6.4rem;
+	height: 6.4rem;
+	border-radius: 50%;
+	background-color: $c-orange;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 8rem;
+	margin: 0 auto;
+	background-image: url('../img/icons/icon_arrow_down_short.svg');
+	background-repeat: no-repeat;
+	background-size: 2.4rem;
+	background-position: center;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: -8px;
+		left: -8px;
+		width: 8rem;
+		height: 8rem;
+		background-image: url('../img/arc_orange.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: top center;
+	}
+}

@@ -1,5 +1,5 @@
 html {
-	font-style: 10px;
+	font-size: 10px;
 	// 1rem = 10px
 }
 
@@ -21,4 +21,28 @@ body {
 	padding: 0 1.5rem;
 	width: 100%;
 	margin: 0 auto;
+}
+
+.title {
+	font-family: $font_title;
+	font-size: 5.8rem;
+	line-height: 1.3;
+	-webkit-text-stroke: 2px $c-black;
+	text-transform: capitalize;
+
+	&--lines {
+		display: flex;
+		gap: 3.5rem;
+		align-items: center;
+		justify-content: center;
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			width: 5.6rem;
+			height: 0.3rem;
+			background-color: currentColor;
+		}
+	}
 }

@@ -1,9 +1,20 @@
+//abstract
 @import 'abstracts/vars';
 
+//base
 @import 'base/reset';
 @import 'base/fonts';
 @import 'base/global';
 
-@import "layout/header";
-@import "layout/main";
-@import "layout/footer";
+//components
+@import 'components/btn';
+@import 'components/search-form';
+@import 'components/arrow-link';
+
+//layours
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+
+//sections
+@import 'sections/hero';
