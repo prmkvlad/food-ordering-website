@@ -6,6 +6,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center bottom 11rem;
+	margin-bottom: 8rem;
 
 	&::before,
 	&::after {
@@ -30,6 +31,13 @@
 	&::after {
 		right: 3rem;
 		transform: scaleX(-1);
+	}
+
+	&__arrow {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 8rem;
 	}
 
 	&__inner {
