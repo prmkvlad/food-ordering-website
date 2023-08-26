@@ -1,0 +1,46 @@
+.review-card {
+	box-sizing: border-box; //fix swiper content-box
+	max-width: 52rem;
+	padding-right: 5rem;
+
+	&__title {
+		font-weight: 700;
+		font-size: 3.2rem;
+		margin-bottom: 4rem;
+		max-width: 37rem;
+	}
+
+	&__text {
+		line-height: 1.9;
+		color: rgba($c-black, 0.5);
+		margin-bottom: 3rem;
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	&__photo {
+		width: 7rem;
+		height: 7rem;
+		object-fit: contain;
+	}
+
+	&__details {}
+
+	&__author {
+		font-weight: 700;
+		line-height: 1.9;
+	}
+
+	&__stars {
+		width: 8.7rem;
+		height: 1.5rem;
+		background-image: url('../img/icons/icon_star.svg');
+		background-size: 1.5rem;
+		background-position: center;
+		background-repeat: space;
+	}
+}

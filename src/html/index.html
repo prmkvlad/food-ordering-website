@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Food Delivery</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -167,52 +168,108 @@
 			<section class="reviews">
 				<div class="container">
 					<div class="reviews__head">
-						<h2 class="title">What our custumers are saying</h2>
+						<h2 class="title reviews__title">What our custumers are saying</h2>
 						<div class="reviews_nav">
-							<button class="reviews__arrow" type="button"></button>
-							<button class="reviews__arrow" type="button"></button>
+							<button class="reviews__arrow reviews__arrow--prev" type="button"></button>
+							<button class="reviews__arrow reviews__arrow--next" type="button"></button>
 						</div>
-						<div class="reviews-slider">
-							<ul class="reviews-slider__list">
-								<li class="reviews-slider__item">
-									<figure class="review-card">
-										<h3 class="review-card__title">Very delicious, really like the food here</h3>
-										<blockquote class="review-card__text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit senectus imperdiet
-												bibendum enim consequat donec diam, posuere at. Scelerisque odio volutpat volutpat,
-												aenean pharetra orci. Feugiat odio fermentum euismod nibh diam sem dictum. Faucibus
-												non null</p>
-										</blockquote>
-										<figcaption class="reviews-card__info">
-											<img class="review-card__photo" src="../img/review_photo_1.webp" alt="review photo"
-												width="68" height="68" loading="lazy">
-											<div class="review-card__details">
-												<div class="review-card__author">Onky Surya</div>
-												<div class="review-card__stars"></div>
-											</div>
-										</figcaption>
-									</figure>
-								</li>
-								<li class="reviews-slider__item">
-									<figure class="review-card">
-										<h3 class="review-card__title">Oh my god! This is the best food ever!</h3>
-										<blockquote class="review-card__text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit senectus imperdiet
-												bibendum enim consequat donec diam, posuere at. Scelerisque odio volutpat volutpat,
-												aenean pharetra orci. Feugiat o</p>
-										</blockquote>
-										<figcaption class="reviews-card__info">
-											<img class="review-card__photo" src="../img/review_photo_2.webp" alt="review photo"
-												width="68" height="68" loading="lazy">
-											<div class="review-card__details">
-												<div class="review-card__author">Cladya</div>
-												<div class="review-card__stars"></div>
-											</div>
-										</figcaption>
-									</figure>
-								</li>
-							</ul>
-						</div>
+					</div>
+					<div class="reviews-slider swiper">
+						<ul class="reviews-slider__list swiper-wrapper">
+							<li class="reviews-slider__item swiper-slide">
+								<figure class="review-card">
+									<h3 class="review-card__title">Very delicious, really like the food here</h3>
+									<blockquote class="review-card__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit senectus imperdiet
+											bibendum enim consequat donec diam, posuere at. Scelerisque odio volutpat volutpat,
+											aenean pharetra orci. Feugiat odio fermentum euismod nibh diam sem dictum. Faucibus
+											non null</p>
+									</blockquote>
+									<figcaption class="review-card__info">
+										<img class="review-card__photo" src="../img/review_photo_1.webp" alt="review photo"
+											width="68" height="68" loading="lazy">
+										<div class="review-card__details">
+											<div class="review-card__author">Onky Surya</div>
+											<div class="review-card__stars"></div>
+										</div>
+									</figcaption>
+								</figure>
+							</li>
+							<li class="reviews-slider__item swiper-slide">
+								<figure class="review-card">
+									<h3 class="review-card__title">Oh my god! This is the best food ever!</h3>
+									<blockquote class="review-card__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit senectus imperdiet
+											bibendum enim consequat donec diam, posuere at. Scelerisque odio volutpat volutpat,
+											aenean pharetra orci. Feugiat o</p>
+									</blockquote>
+									<figcaption class="review-card__info">
+										<img class="review-card__photo" src="../img/review_photo_2.webp" alt="review photo"
+											width="68" height="68" loading="lazy">
+										<div class="review-card__details">
+											<div class="review-card__author">Cladya</div>
+											<div class="review-card__stars"></div>
+										</div>
+									</figcaption>
+								</figure>
+							</li>
+							<li class="reviews-slider__item swiper-slide">
+								<figure class="review-card">
+									<h3 class="review-card__title">Very delicious, really like the food here</h3>
+									<blockquote class="review-card__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit senectus imperdiet
+											bibendum enim consequat donec diam, posuere at. Scelerisque odio volutpat volutpat,
+											aenean pharetra orci. Feugiat odio fermentum euismod nibh diam sem dictum. Faucibus
+											non null</p>
+									</blockquote>
+									<figcaption class="review-card__info">
+										<img class="review-card__photo" src="../img/review_photo_1.webp" alt="review photo"
+											width="68" height="68" loading="lazy">
+										<div class="review-card__details">
+											<div class="review-card__author">Onky Surya</div>
+											<div class="review-card__stars"></div>
+										</div>
+									</figcaption>
+								</figure>
+							</li>
+							<li class="reviews-slider__item swiper-slide">
+								<figure class="review-card">
+									<h3 class="review-card__title">Oh my god! This is the best food ever!</h3>
+									<blockquote class="review-card__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit senectus imperdiet
+											bibendum enim consequat donec diam, posuere at. Scelerisque odio volutpat volutpat,
+											aenean pharetra orci. Feugiat o</p>
+									</blockquote>
+									<figcaption class="review-card__info">
+										<img class="review-card__photo" src="../img/review_photo_2.webp" alt="review photo"
+											width="68" height="68" loading="lazy">
+										<div class="review-card__details">
+											<div class="review-card__author">Cladya</div>
+											<div class="review-card__stars"></div>
+										</div>
+									</figcaption>
+								</figure>
+							</li>
+							<li class="reviews-slider__item swiper-slide">
+								<figure class="review-card">
+									<h3 class="review-card__title">Very delicious, really like the food here</h3>
+									<blockquote class="review-card__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit senectus imperdiet
+											bibendum enim consequat donec diam, posuere at. Scelerisque odio volutpat volutpat,
+											aenean pharetra orci. Feugiat odio fermentum euismod nibh diam sem dictum. Faucibus
+											non null</p>
+									</blockquote>
+									<figcaption class="review-card__info">
+										<img class="review-card__photo" src="../img/review_photo_1.webp" alt="review photo"
+											width="68" height="68" loading="lazy">
+										<div class="review-card__details">
+											<div class="review-card__author">Onky Surya</div>
+											<div class="review-card__stars"></div>
+										</div>
+									</figcaption>
+								</figure>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</section>
@@ -260,6 +317,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="../js/main.js"></script>
 </body>
 
