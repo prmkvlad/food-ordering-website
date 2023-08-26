@@ -1,0 +1,70 @@
+.booking {
+
+	&__inner {
+		position: relative;
+		background-color: $c-black;
+		border-radius: 4.8rem;
+		padding: 10rem 3rem 6rem;
+		margin-bottom: 11rem;
+		background-image: url('../img/white_ellipse.svg'), url('../img/white_ellipse.svg');
+		background-repeat: no-repeat;
+		background-size: 34rem 34rem, 19rem 19rem;
+		background-position: top 11rem left -7rem, top 7rem right -2rem;
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			background-image: url('../img/leaf_1.webp');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+
+		&::before {
+			width: 25rem;
+			height: 20rem;
+			top: 5rem;
+			left: -12rem;
+		}
+
+		&::after {
+			width: 15rem;
+			height: 12rem;
+			bottom: 11rem;
+			right: -7rem;
+			transform: scaleX(-1);
+		}
+	}
+
+	&_arrow {
+		position: absolute;
+		top: -3rem;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__title {
+		max-width: 54rem;
+		color: $c-white;
+		-webkit-text-stroke: 2px $c-white;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 3rem;
+	}
+
+	&__text {
+		max-width: 57rem;
+		color: rgba($c-white, 0.5);
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 5rem;
+	}
+
+	&__form {
+		max-width: 71rem;
+		margin: 0 auto;
+	}
+}

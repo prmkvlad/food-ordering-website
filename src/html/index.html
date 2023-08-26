@@ -130,7 +130,7 @@
 				<div class="container">
 					<div class="booking__inner">
 						<a class="arrow-link arrow-link--green booking_arrow" href=""></a>
-						<h2 class="title">Get Your promo, and Book now!</h2>
+						<h2 class="title booking__title">Get Your promo, and Book now!</h2>
 						<div class="booking__text">
 							<p>Suspendisse mattis tincidunt leo posuere. Ullamcorper odio pellentesque sollicitudin morbi
 								tristique est est montes.</p>
@@ -139,20 +139,23 @@
 							<div class="form__inner">
 								<div class="form__group">
 									<label class="form__label" for="date"></label>
-									<input class="form__input" id="date" type="date" name="date" placeholder="dd-mm-yy" required>
+									<input class="form__input form__input--date" id="date" type="text" name="date"
+										placeholder="dd-mm-yy" required>
 								</div>
 								<div class="form__group">
 									<label class="form__label" for="person"></label>
-									<input class="form__input" id="person" type="text" name="person" placeholder="person"
-										required>
+									<input class="form__input form__input--person" id="person" type="text" name="person"
+										placeholder="person" required>
 								</div>
 								<div class="form__group">
 									<label class="form__label" for="email"></label>
-									<input class="form__input" id="email" type="email" name="email" placeholder="email" required>
+									<input class="form__input form__input--email" id="email" type="email" name="email"
+										placeholder="email" required>
 								</div>
 								<div class="form__group">
 									<label class="form__label" for="phone"></label>
-									<input class="form__input" id="phone" type="tel" name="phone" placeholder="phone" required>
+									<input class="form__input form__input--phone" id="phone" type="tel" name="phone"
+										placeholder="phone" required>
 								</div>
 							</div>
 							<button class="btn form__btn" type="submit">Booking Now</button>

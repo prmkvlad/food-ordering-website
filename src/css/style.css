@@ -188,6 +188,12 @@ body {
   background-size: contain;
   background-position: top center;
 }
+.arrow-link--green {
+  background-color: #27ad55;
+}
+.arrow-link--green::before {
+  background-image: url("../img/arc_green.svg");
+}
 
 .product-card {
   position: relative;
@@ -243,6 +249,40 @@ body {
   background-size: 1.8rem;
   background-position: center right 4.4rem;
   opacity: 0;
+}
+
+.form__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.form__input {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1.2rem;
+  padding: 1.7rem 5rem 1.7rem 6rem;
+  background-repeat: no-repeat;
+  background-position: left 2rem center;
+  background-size: 2.4rem;
+}
+.form__input--date {
+  background-image: url("../img/icons/icon_chevron_down.svg"), url("../img/icons/icon_calendar.svg");
+  background-position: right 2rem center, left 2rem center;
+}
+.form__input--person {
+  background-image: url("../img/icons/icon_person.svg");
+}
+.form__input--email {
+  background-image: url("../img/icons/icon_email.svg");
+}
+.form__input--phone {
+  background-image: url("../img/icons/icon_phone.svg");
+}
+.form__btn {
+  display: block;
+  margin: 0 auto;
 }
 
 .header {
@@ -415,4 +455,64 @@ body {
   border-radius: 2rem;
   font-weight: bold;
   color: #ffffff;
+}
+
+.booking__inner {
+  position: relative;
+  background-color: #121212;
+  border-radius: 4.8rem;
+  padding: 10rem 3rem 6rem;
+  margin-bottom: 11rem;
+  background-image: url("../img/white_ellipse.svg"), url("../img/white_ellipse.svg");
+  background-repeat: no-repeat;
+  background-size: 34rem 34rem, 19rem 19rem;
+  background-position: top 11rem left -7rem, top 7rem right -2rem;
+}
+.booking__inner::before, .booking__inner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../img/leaf_1.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.booking__inner::before {
+  width: 25rem;
+  height: 20rem;
+  top: 5rem;
+  left: -12rem;
+}
+.booking__inner::after {
+  width: 15rem;
+  height: 12rem;
+  bottom: 11rem;
+  right: -7rem;
+  transform: scaleX(-1);
+}
+.booking_arrow {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.booking__title {
+  max-width: 54rem;
+  color: #ffffff;
+  -webkit-text-stroke: 2px #ffffff;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+.booking__text {
+  max-width: 57rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+.booking__form {
+  max-width: 71rem;
+  margin: 0 auto;
 }
