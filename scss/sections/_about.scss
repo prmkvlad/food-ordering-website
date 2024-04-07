@@ -1,0 +1,67 @@
+.about {
+	margin-bottom: 15rem;
+
+	&__inner {
+		display: flex;
+		gap: 10rem;
+	}
+
+	&__content {
+		width: 44rem;
+	}
+
+	&__title {
+		margin-bottom: 3rem;
+
+		span {
+			display: block;
+			font-size: 2rem;
+			color: $c-green;
+			margin-bottom: 2rem;
+			-webkit-text-stroke: 0;
+		}
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		color: rgba($c-black, 0.5);
+		margin-bottom: 4.5rem;
+	}
+
+	&__link {}
+
+	&__images {
+		position: relative;
+		width: 54rem;
+		height: 54rem;
+		border-radius: 50%;
+		background-image: url('../img/table.webp'),
+			linear-gradient(180deg, $c-green 65%, transparent);
+		background-repeat: no-repeat;
+		background-size: contain, 100%;
+		background-position: center;
+	}
+
+	&__breakfast {
+		position: relative;
+		width: 19rem;
+		height: 19rem;
+		transform: translateY(-3rem);
+	}
+
+	&__img {
+		width: 100%;
+		object-fit: contain;
+	}
+
+	&__price {
+		position: absolute;
+		bottom: 2.5rem;
+		right: 0;
+		background-color: $c-green;
+		padding: 7px 12px;
+		border-radius: 2rem;
+		font-weight: bold;
+		color: $c-white;
+	}
+}

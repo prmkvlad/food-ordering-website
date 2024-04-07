@@ -1,0 +1,68 @@
+html {
+	font-size: 10px;
+	// 1rem = 10px
+}
+
+body {
+	font-family: $font_main;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: $c-black;
+	background-color: $c-white;
+}
+
+.wrapper {
+	overflow-x: hidden;
+}
+
+.container {
+	max-width: 120rem; //1200px
+	padding: 0 1.5rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.title {
+	font-family: $font_title;
+	font-size: 5.8rem;
+	line-height: 1.3;
+	-webkit-text-stroke: 2px $c-black;
+	text-transform: capitalize;
+
+	&--lines {
+		display: flex;
+		gap: 3.5rem;
+		align-items: center;
+		justify-content: center;
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			width: 5.6rem;
+			height: 0.3rem;
+			background-color: currentColor;
+		}
+	}
+}
+
+.main {
+	position: relative;
+
+	&::before {
+		content: '';
+		display: block;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: -2;
+		background-image:
+			url('../img/map.svg'),
+			url('../img/sections_bg.svg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center 170rem, center 175rem;
+	}
+}
