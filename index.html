@@ -12,12 +12,12 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="container">
-				<nav class="nav">
-					<a class="logo" href="">
-						<img class="logo__img" src="./img/logo.svg" alt="logotype" width="92" height="48" loading="lazy">
-					</a>
-					<ul class="menu">
+			<div class="header__container container">
+				<a class="logo" href="">
+					<img class="logo__img" src="./img/logo.svg" alt="logotype" width="92" height="48" loading="lazy">
+				</a>
+				<nav class="header__nav menu">
+					<ul class="menu__body">
 						<li class="menu__item">
 							<a class="menu__link" href="">Home</a>
 						</li>
@@ -31,8 +31,15 @@
 							<a class="menu__link" href="">Get Apps</a>
 						</li>
 					</ul>
-					<button class="nav__btn" type="button">Sign In</button>
 				</nav>
+				<div class="header__buttons">
+					<button class="header__btn" type="button">Sign In</button>
+					<div class="menu__icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
 			</div>
 		</header>
 

@@ -11,3 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 });
+
+// Burger menu
+
+const burger = document.querySelector('.menu__icon');
+const menu = document.querySelector('.menu');
+const body = document.body;
+
+function topFunction() {
+	body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+if (burger && menu) {
+	burger.addEventListener('click', () => {
+		topFunction();
+		burger.classList.toggle('_active');
+		menu.classList.toggle('_active');
+		body.classList.toggle('_lock');
+	})
+}
