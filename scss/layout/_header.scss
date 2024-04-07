@@ -4,14 +4,24 @@
 	left: 0;
 	right: 0;
 	z-index: 10;
-	padding: 4.1rem 0;
+	padding: clamp(1.2rem, 0.182rem + 3.182vw, 4rem) 0;
 	background-color: $c-black;
-}
 
-.nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		z-index: 3;
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
 	&__btn {
 		font-size: 1.4rem;
@@ -20,16 +30,18 @@
 		background-color: rgba($c-white, 0.2);
 		border-radius: 0.8rem;
 		cursor: pointer;
+		transition: background-color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba($c-white, 0.35);
+			}
+		}
 	}
-}
 
-.menu {
-	display: flex;
-	gap: 6.9rem;
-
-	&__item {}
-
-	&__link {
-		color: rgba($c-white, 0.5);
+	&__buttons {
+		display: flex;
+		gap: clamp(2rem, 1.636rem + 1.136vw, 3rem);
+		align-items: center;
 	}
 }
