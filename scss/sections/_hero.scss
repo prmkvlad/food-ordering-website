@@ -6,7 +6,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center bottom 11rem;
-	margin-bottom: 8rem;
+	margin-bottom: clamp(5rem, 3.909rem + 3.409vw, 8rem);
 
 	&::before,
 	&::after {

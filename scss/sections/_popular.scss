@@ -3,6 +3,7 @@
 
 	&__title {
 		margin-bottom: 1.5rem;
+		text-align: center;
 	}
 
 	&__description {
@@ -10,18 +11,39 @@
 		color: rgba($c-black, 0.5);
 		max-width: 52rem;
 		margin: 0 auto;
-		margin-bottom: 19rem;
+		margin-bottom: clamp(3rem, -2.818rem + 18.182vw, 19rem);
 	}
 
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 3.5rem;
+		gap: clamp(1.5rem, 0.773rem + 2.273vw, 3.5rem);
 		align-items: end;
 		margin-bottom: 9rem;
+
+		@media (max-width: 1023.98px) {
+			grid-template-columns: repeat(2, 1fr);
+			place-items: center;
+		}
+
+		@media (max-width: 575.98px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 
-	&__item {}
+	&__item {
+
+		@media (min-width: 576px) and (max-width: 1023.98px) {
+			&:nth-child(2n+1) {
+				justify-self: end;
+			}
+
+			&:nth-child(2n) {
+				justify-self: start;
+			}
+		}
+
+	}
 
 	&__arrow {}
 }
