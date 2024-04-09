@@ -161,8 +161,11 @@ body._lock {
   display: none;
 }
 .search-form__input {
-  padding: 2.6rem;
+  padding: clamp(1.2rem, 0.691rem + 1.591vw, 2.6rem);
   width: 100%;
+}
+.search-form__btn {
+  padding: clamp(1.2rem, 0.909rem + 0.909vw, 2rem) clamp(1.6rem, 0.545rem + 3.295vw, 4.5rem);
 }
 
 .arrow-link {
@@ -517,8 +520,8 @@ body._lock {
 
 .hero {
   position: relative;
-  height: 120rem;
-  padding-top: 14rem;
+  height: clamp(70rem, 51.818rem + 56.818vw, 120rem);
+  padding-top: clamp(8rem, 7.979rem + 0.066vw, 14rem);
   background-image: url("../img/hero_ellipse.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -530,18 +533,38 @@ body._lock {
   position: absolute;
   bottom: 0;
   display: block;
-  width: 53rem;
-  height: 50rem;
+  width: 45rem;
+  height: 45rem;
   background-image: url("../img/big_burger.webp"), url("../img/white_ellipse.svg");
   background-repeat: no-repeat;
   background-position: right bottom, left top;
-  background-size: 48rem 37rem, 46rem 46rem;
+  background-size: 42rem 34rem, 45rem 45rem;
+}
+@media (max-width: 1023.98px) {
+  .hero::before, .hero::after {
+    width: 33rem;
+    height: 33rem;
+    background-size: 30rem 22rem, 33rem 33rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero::before, .hero::after {
+    width: 20rem;
+    height: 20rem;
+    background-size: 20rem 15rem, 20rem 20rem;
+    bottom: 3rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .hero::before, .hero::after {
+    display: none;
+  }
 }
 .hero::before {
-  left: 3rem;
+  left: 1rem;
 }
 .hero::after {
-  right: 3rem;
+  right: 1rem;
   transform: scaleX(-1);
 }
 .hero__arrow {
@@ -558,17 +581,19 @@ body._lock {
 .hero__content {
   transform: translateY(-50%);
 }
+@media (max-width: 479.98px) {
+  .hero__content {
+    transform: translateY(-30%);
+  }
+}
 .hero__title {
   color: #ffffff;
   -webkit-text-stroke: 2px #ffffff;
-  font-size: 7.2rem;
+  font-size: clamp(2.8rem, 1.2rem + 5vw, 7.2rem);
   max-width: 80rem;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 3rem;
-}
-.hero__title::before, .hero__title::after {
-  margin-top: -8rem;
 }
 .hero__description {
   font-size: 1.8rem;
@@ -576,7 +601,7 @@ body._lock {
   text-align: center;
   max-width: 48rem;
   margin: 0 auto;
-  margin-bottom: 10rem;
+  margin-bottom: clamp(4rem, 1.818rem + 6.818vw, 10rem);
 }
 .popular {
   margin-bottom: 12rem;

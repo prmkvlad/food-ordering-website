@@ -14,7 +14,11 @@
 	}
 
 	&__input {
-		padding: 2.6rem;
+		padding: clamp(1.2rem, 0.691rem + 1.591vw, 2.6rem);
 		width: 100%;
+	}
+
+	&__btn {
+		padding: clamp(1.2rem, 0.909rem + 0.909vw, 2rem) clamp(1.6rem, 0.545rem + 3.295vw, 4.5rem);
 	}
 }
