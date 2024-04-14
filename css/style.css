@@ -604,7 +604,7 @@ body._lock {
   margin-bottom: clamp(4rem, 1.818rem + 6.818vw, 10rem);
 }
 .popular {
-  margin-bottom: 12rem;
+  margin-bottom: clamp(9rem, 7.909rem + 3.409vw, 12rem);
 }
 .popular__title {
   margin-bottom: 1.5rem;
@@ -644,17 +644,24 @@ body._lock {
   }
 }
 .about {
-  margin-bottom: 15rem;
+  margin-bottom: clamp(12rem, 10.909rem + 3.409vw, 15rem);
 }
 .about__inner {
   display: flex;
-  gap: 10rem;
+  gap: 5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 991.98px) {
+  .about__inner {
+    justify-content: center;
+  }
 }
 .about__content {
   width: 44rem;
 }
 .about__title {
-  margin-bottom: 3rem;
+  margin-bottom: clamp(1.5rem, 0.955rem + 1.705vw, 3rem);
 }
 .about__title span {
   display: block;
@@ -666,12 +673,13 @@ body._lock {
 .about__text {
   font-size: 1.6rem;
   color: rgba(18, 18, 18, 0.5);
-  margin-bottom: 4.5rem;
+  margin-bottom: clamp(3rem, 2.455rem + 1.705vw, 4.5rem);
 }
 .about__images {
   position: relative;
-  width: 54rem;
-  height: 54rem;
+  width: clamp(29rem, 20.636rem + 26.136vw, 52rem);
+  height: clamp(30rem, 21.636rem + 26.136vw, 53rem);
+  aspect-ratio: 1;
   border-radius: 50%;
   background-image: url("../img/table.webp"), linear-gradient(180deg, #27ad55 65%, transparent);
   background-repeat: no-repeat;
@@ -680,8 +688,8 @@ body._lock {
 }
 .about__breakfast {
   position: relative;
-  width: 19rem;
-  height: 19rem;
+  width: clamp(11rem, 8.091rem + 9.091vw, 19rem);
+  height: clamp(17rem, 16.273rem + 2.273vw, 19rem);
   transform: translateY(-3rem);
 }
 .about__img {
@@ -691,13 +699,14 @@ body._lock {
 }
 .about__price {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: clamp(4.5rem, 5.227rem - 2.273vw, 2.5rem);
   right: 0;
   background-color: #27ad55;
   padding: 7px 12px;
   border-radius: 2rem;
   font-weight: bold;
   color: #ffffff;
+  font-size: clamp(1.2rem, 1.055rem + 0.455vw, 1.6rem);
 }
 
 .booking__inner {

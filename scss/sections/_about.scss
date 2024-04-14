@@ -1,9 +1,15 @@
 .about {
-	margin-bottom: 15rem;
+	margin-bottom: clamp(12rem, 10.909rem + 3.409vw, 15rem);
 
 	&__inner {
 		display: flex;
-		gap: 10rem;
+		gap: 5rem;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@media (max-width: 991.98px) {
+			justify-content: center;
+		}
 	}
 
 	&__content {
@@ -11,7 +17,7 @@
 	}
 
 	&__title {
-		margin-bottom: 3rem;
+		margin-bottom: clamp(1.5rem, 0.955rem + 1.705vw, 3rem);
 
 		span {
 			display: block;
@@ -25,27 +31,31 @@
 	&__text {
 		font-size: 1.6rem;
 		color: rgba($c-black, 0.5);
-		margin-bottom: 4.5rem;
+		margin-bottom: clamp(3rem, 2.455rem + 1.705vw, 4.5rem);
 	}
 
 	&__link {}
 
 	&__images {
 		position: relative;
-		width: 54rem;
-		height: 54rem;
+		// width: clamp(47rem, 13.615rem + 33.654vw, 54rem);
+		width: clamp(29rem, 20.636rem + 26.136vw, 52rem);
+		height: clamp(30rem, 21.636rem + 26.136vw, 53rem);
+		// height: clamp(47rem, 13.615rem + 33.654vw, 54rem);
+		aspect-ratio: 1;
 		border-radius: 50%;
 		background-image: url('../img/table.webp'),
 			linear-gradient(180deg, $c-green 65%, transparent);
 		background-repeat: no-repeat;
 		background-size: contain, 100%;
 		background-position: center;
+
 	}
 
 	&__breakfast {
 		position: relative;
-		width: 19rem;
-		height: 19rem;
+		width: clamp(11rem, 8.091rem + 9.091vw, 19rem);
+		height: clamp(17rem, 16.273rem + 2.273vw, 19rem);
 		transform: translateY(-3rem);
 	}
 
@@ -56,12 +66,13 @@
 
 	&__price {
 		position: absolute;
-		bottom: 2.5rem;
+		bottom: clamp(4.5rem, 5.227rem + -2.273vw, 2.5rem);
 		right: 0;
 		background-color: $c-green;
 		padding: 7px 12px;
 		border-radius: 2rem;
 		font-weight: bold;
 		color: $c-white;
+		font-size: clamp(1.2rem, 1.055rem + 0.455vw, 1.6rem);
 	}
 }

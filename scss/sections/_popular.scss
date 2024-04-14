@@ -1,5 +1,5 @@
 .popular {
-	margin-bottom: 12rem;
+	margin-bottom: clamp(9rem, 7.909rem + 3.409vw, 12rem);
 
 	&__title {
 		margin-bottom: 1.5rem;
