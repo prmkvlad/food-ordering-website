@@ -5,6 +5,12 @@
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
 		margin-bottom: 3rem;
+
+		@media (max-width: 575.98px) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 1.5rem;
+			justify-items: center;
+		}
 	}
 
 	&__group {}
@@ -12,6 +18,7 @@
 	&__label {}
 
 	&__input {
+		max-width: 34.5rem;
 		width: 100%;
 		color: rgba($c-white, 0.5);
 		background-color: rgba($c-white, 0.2);
