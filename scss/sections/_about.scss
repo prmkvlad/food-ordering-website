@@ -38,10 +38,8 @@
 
 	&__images {
 		position: relative;
-		// width: clamp(47rem, 13.615rem + 33.654vw, 54rem);
 		width: clamp(29rem, 20.636rem + 26.136vw, 52rem);
 		height: clamp(30rem, 21.636rem + 26.136vw, 53rem);
-		// height: clamp(47rem, 13.615rem + 33.654vw, 54rem);
 		aspect-ratio: 1;
 		border-radius: 50%;
 		background-image: url('../img/table.webp'),
