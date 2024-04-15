@@ -3,17 +3,22 @@
 	max-width: 52rem;
 	padding-right: 5rem;
 
+	@media (max-width: 767.98px) {
+		margin: 0 auto;
+		padding-right: 0;
+	}
+
 	&__title {
 		font-weight: 700;
-		font-size: 3.2rem;
-		margin-bottom: 4rem;
+		font-size: clamp(2.2rem, 1.836rem + 1.136vw, 3.2rem);
+		margin-bottom: clamp(1.5rem, 0.591rem + 2.841vw, 4rem);
 		max-width: 37rem;
 	}
 
 	&__text {
 		line-height: 1.9;
 		color: rgba($c-black, 0.5);
-		margin-bottom: 3rem;
+		margin-bottom: clamp(2rem, 1.636rem + 1.136vw, 3rem);
 	}
 
 	&__info {
