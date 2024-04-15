@@ -13,10 +13,6 @@
 		align-items: center;
 	}
 
-	.logo {
-		z-index: 3;
-	}
-
 	&__nav {
 		display: flex;
 		justify-content: space-between;
@@ -43,5 +39,19 @@
 		display: flex;
 		gap: clamp(2rem, 1.636rem + 1.136vw, 3rem);
 		align-items: center;
+	}
+}
+
+.logo {
+	z-index: 3;
+
+	&__img {
+		transition: transform 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
 	}
 }

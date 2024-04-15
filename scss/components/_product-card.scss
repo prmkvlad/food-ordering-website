@@ -3,6 +3,36 @@
 	background-color: $c-white;
 	border-radius: 2.4rem;
 	padding: 26rem 5rem 4rem;
+	transition: background-color 0.3s ease 0s;
+
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $c-black;
+
+			.product-card__name {
+				color: $c-white;
+				transition: color 0.3s ease 0s;
+
+			}
+
+			.product-card__order {
+				opacity: 1;
+			}
+
+			.product-card__img {
+				width: 90%;
+				height: 165%;
+				transition: all 0.3s ease 0s;
+
+			}
+
+			.product-card__content {
+				transform: translateY(-7rem);
+				transition: transform 0.3s ease 0s;
+			}
+		}
+	}
 
 	&::before {
 		content: '';
