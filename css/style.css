@@ -382,7 +382,9 @@ body._lock {
 
 .social {
   display: flex;
-  gap: 4rem;
+  gap: clamp(2rem, 1.273rem + 2.273vw, 4rem);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .social__link {
   display: block;
@@ -558,13 +560,13 @@ body._lock {
 
 .footer {
   background-color: #121212;
-  padding: 13rem 0 10rem;
+  padding: clamp(9rem, 7.545rem + 4.545vw, 13rem) 0 9rem;
 }
 .footer__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6rem;
+  gap: clamp(4rem, 3.273rem + 2.273vw, 6rem);
   text-align: center;
 }
 .footer__text {
@@ -574,7 +576,11 @@ body._lock {
 
 .footer-menu {
   display: flex;
-  gap: 7rem;
+  -moz-column-gap: clamp(2.5rem, 0.864rem + 5.114vw, 7rem);
+       column-gap: clamp(2.5rem, 0.864rem + 5.114vw, 7rem);
+  row-gap: clamp(2.5rem, 1.591rem + 2.841vw, 5rem);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .footer-menu__link {
   color: #ffffff;
@@ -782,7 +788,7 @@ body._lock {
 }
 .about__price {
   position: absolute;
-  bottom: clamp(4.5rem, 5.227rem - 2.273vw, 2.5rem);
+  bottom: 2.5rem;
   right: 0;
   background-color: #27ad55;
   padding: 7px 12px;
@@ -857,7 +863,7 @@ body._lock {
 }
 
 .reviews {
-  margin-bottom: 11rem;
+  margin-bottom: clamp(9rem, 8.273rem + 2.273vw, 11rem);
 }
 .reviews__head {
   display: flex;

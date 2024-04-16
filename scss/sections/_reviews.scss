@@ -1,5 +1,5 @@
 .reviews {
-	margin-bottom: 11rem;
+	margin-bottom: clamp(9rem, 8.273rem + 2.273vw, 11rem);
 
 	&__head {
 		display: flex;
