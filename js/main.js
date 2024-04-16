@@ -13,6 +13,32 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
+	// hero section burger background animation
+
+	let burgerAnimationIsPlayed = false;
+
+	document.addEventListener('scroll', function () {
+		const scrollPosition = window.scrollY;
+		const windowWidth = window.innerWidth;
+		const windowHeight = window.innerHeight;
+
+		const heroBottom = hero.offsetTop + hero.offsetHeight;
+
+		// screen width check
+		if (windowWidth >= 480 && !burgerAnimationIsPlayed) {
+			const triggerPosition = heroBottom - 50 - windowHeight;
+			const hero = document.querySelector('.hero');
+
+			if (scrollPosition >= triggerPosition) {
+				hero.classList.add('animate-burgers');
+				burgerAnimationIsPlayed = true;
+			}
+		}
+	});
+
+
+
+
 });
 
 // Burger menu

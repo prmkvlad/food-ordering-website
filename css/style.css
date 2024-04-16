@@ -637,10 +637,33 @@ body._lock {
 }
 .hero::before {
   left: 1rem;
+  transform: translateX(-100%);
 }
 .hero::after {
   right: 1rem;
-  transform: scaleX(-1);
+  transform: translateX(100%) scaleX(-1);
+}
+.hero.animate-burgers::before {
+  animation: slideInLeft 0.7s forwards;
+}
+.hero.animate-burgers::after {
+  animation: slideInRight 0.7s forwards;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%) scaleX(-1);
+  }
+  100% {
+    transform: translateX(0) scaleX(-1);
+  }
 }
 .hero__arrow {
   position: absolute;

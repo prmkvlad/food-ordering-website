@@ -43,12 +43,45 @@
 
 	&::before {
 		left: 1rem;
+		transform: translateX(-100%);
 	}
 
 	&::after {
 		right: 1rem;
-		transform: scaleX(-1);
+		transform: translateX(100%) scaleX(-1);
 	}
+
+	// ===========Burgers animation========== //
+
+	&.animate-burgers::before {
+		animation: slideInLeft 0.7s forwards;
+	}
+
+	&.animate-burgers::after {
+		animation: slideInRight 0.7s forwards;
+	}
+
+	@keyframes slideInLeft {
+		0% {
+			transform: translateX(-100%);
+		}
+
+		100% {
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes slideInRight {
+		0% {
+			transform: translateX(100%) scaleX(-1);
+		}
+
+		100% {
+			transform: translateX(0) scaleX(-1);
+		}
+	}
+
+	// ===================================== //
 
 	&__arrow {
 		position: absolute;
