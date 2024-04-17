@@ -20,6 +20,21 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: contain;
+			animation: drift 15s infinite alternate;
+		}
+
+		@keyframes drift {
+			0% {
+				transform: translateY(0) translateX(0);
+			}
+
+			50% {
+				transform: translateY(-7px) translateX(7px);
+			}
+
+			100% {
+				transform: translateY(0) translateX(0);
+			}
 		}
 
 		&::before {
