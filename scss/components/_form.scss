@@ -44,6 +44,29 @@
 		&--phone {
 			background-image: url('../img/icons/icon_phone.svg');
 		}
+
+		&:focus {
+			color: $c-white;
+			background-color: rgba($c-white, 0.3);
+			box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+		}
+
+		/* for WebKit (Chrome, Safari) */
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus,
+		&:-webkit-autofill:active {
+			-webkit-text-fill-color: rgba($c-white, 0.5) !important;
+			background-color: rgba($c-white, 0.2) !important;
+			transition: background-color 5000s ease-in-out 0s;
+		}
+
+		/* for Firefox */
+		&:-moz-placeholder {
+			color: rgba($c-white, 0.5) !important;
+			background-color: rgba($c-white, 0.2) !important;
+			transition: background-color 5000s ease-in-out 0s;
+		}
 	}
 
 	&__btn {

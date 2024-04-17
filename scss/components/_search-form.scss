@@ -16,6 +16,10 @@
 	&__input {
 		padding: clamp(1.2rem, 0.691rem + 1.591vw, 2.6rem);
 		width: 100%;
+
+		&:focus {
+			color: $c-black;
+		}
 	}
 
 	&__btn {
