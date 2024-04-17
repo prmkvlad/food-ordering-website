@@ -173,6 +173,12 @@ body._lock {
 .search-form__input:focus {
   color: #121212;
 }
+.search-form__input:focus::-moz-placeholder {
+  color: transparent;
+}
+.search-form__input:focus::placeholder {
+  color: transparent;
+}
 .search-form__btn {
   padding: clamp(1.2rem, 0.909rem + 0.909vw, 2rem) clamp(1.6rem, 0.545rem + 3.295vw, 4.5rem);
 }
@@ -338,6 +344,12 @@ body._lock {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+.form__input:focus::-moz-placeholder {
+  color: transparent;
+}
+.form__input:focus::placeholder {
+  color: transparent;
 }
 .form__input:-webkit-autofill, .form__input:-webkit-autofill:hover, .form__input:-webkit-autofill:focus, .form__input:-webkit-autofill:active {
   -webkit-text-fill-color: rgba(255, 255, 255, 0.5) !important;

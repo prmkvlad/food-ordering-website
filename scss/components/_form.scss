@@ -49,6 +49,10 @@
 			color: $c-white;
 			background-color: rgba($c-white, 0.3);
 			box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+
+			&::placeholder {
+				color: transparent;
+			}
 		}
 
 		/* for WebKit (Chrome, Safari) */
