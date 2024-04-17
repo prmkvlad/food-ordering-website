@@ -260,6 +260,7 @@ body._lock {
   filter: blur(6rem);
 }
 .product-card__content {
+  position: relative;
   text-align: center;
   font-weight: bold;
   transition: transform 0.3s ease 0s;
