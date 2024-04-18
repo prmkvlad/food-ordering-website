@@ -331,6 +331,10 @@ body._lock {
 .form__input--date {
   background-image: url("../img/icons/icon_chevron_down.svg"), url("../img/icons/icon_calendar.svg");
   background-position: right 2rem center, left 2rem center;
+  cursor: pointer;
+}
+.form__input--date.active {
+  background-image: url("../img/icons/icon_chevron_up.svg"), url("../img/icons/icon_calendar.svg");
 }
 .form__input--person {
   background-image: url("../img/icons/icon_person.svg");

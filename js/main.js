@@ -35,10 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		}
 	});
-
-
-
-
 });
 
 // Burger menu
@@ -76,3 +72,15 @@ anchors.forEach(anchor => {
 		})
 	})
 })
+
+// custom datapicker implementation
+
+const config = {
+	altInput: true,
+	altFormat: "j F, Y",
+	dateFormat: "d-m-Y",
+	minDate: "01-01-1900",
+	maxDate: "today"
+}
+
+flatpickr("#date", config);
