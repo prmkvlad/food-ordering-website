@@ -80,7 +80,8 @@ const config = {
 	altFormat: "j F, Y",
 	dateFormat: "d-m-Y",
 	minDate: "01-01-1900",
-	maxDate: "today"
+	maxDate: "today",
+	disableMobile: "true"
 }
 
 flatpickr("#date", config);
