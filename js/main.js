@@ -85,3 +85,29 @@ const config = {
 }
 
 flatpickr("#date", config);
+
+// phone mask
+
+const phoneInput = document.getElementById('phone');
+
+const maskOptions = {
+	mask: '+{38} (000) 000-00-00'
+}
+
+const mask = IMask(phoneInput, maskOptions);
+
+// Phone number validation
+phoneInput.addEventListener('input', function () {
+	var value = this.value.replace(/\D/g, '');
+	if (value.length < 10) {
+		this.setCustomValidity('Enter the full phone number.');
+	} else {
+		this.setCustomValidity('');
+	}
+});
+
+phoneInput.closest('form').addEventListener('submit', function (e) {
+	if (!phoneInput.checkValidity()) {
+		e.preventDefault();
+	}
+});
