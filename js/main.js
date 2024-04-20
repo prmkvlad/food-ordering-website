@@ -79,17 +79,24 @@ const config = {
 	altInput: true,
 	altFormat: "j F, Y",
 	dateFormat: "d-m-Y",
-	minDate: "01-01-1900",
-	maxDate: "today",
-	disableMobile: "true"
+	minDate: "today",
+	maxDate: new Date().fp_incr(30),
+	disableMobile: "true",
 }
 
-flatpickr("#date", config);
+const dateInput = flatpickr("#date", config);
+const fpInput = document.querySelector('.input');
+
+fpInput.closest('form').addEventListener('submit', function (e) {
+	if (!fpInput.value) {
+		alert('Пожалуйста, введите дату.');
+		e.preventDefault();
+	}
+});
 
 // phone mask
 
 const phoneInput = document.getElementById('phone');
-
 const maskOptions = {
 	mask: '+{38} (000) 000-00-00'
 }
