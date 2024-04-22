@@ -24,7 +24,6 @@
 
 			.product-card__img {
 				width: 90%;
-				height: 165%;
 			}
 		}
 	}
@@ -44,9 +43,18 @@
 
 	&__content {
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		text-align: center;
 		font-weight: bold;
 		transition: transform 0.3s ease 0s;
+		height: 11.5rem;
+		max-width: 25rem;
+
+		@media (min-width: 575.98px) and (max-width: 1023.98px) {
+			width: clamp(16.3rem, 9rem + 12.358vw, 25rem);
+		}
 	}
 
 	&__img {
@@ -56,20 +64,27 @@
 		bottom: 19rem;
 		margin: 0 auto;
 		transition: all 0.3s ease 0s;
+		width: 80%;
+		height: auto;
+
+		@media (max-width: 575.98px) {
+			max-height: 16rem;
+		}
 	}
 
 	&__name {
-		font-size: 2.2rem;
-		max-width: 25rem;
+		font-size: clamp(2rem, 1.815rem + 0.321vw, 2.2rem);
 		margin: 0 auto;
 		margin-bottom: 2rem;
 		text-transform: capitalize;
 		transition: color 0.3s ease 0s;
+		overflow: hidden;
 	}
 
 	&__price {
-		font-size: 2rem;
+		font-size: clamp(1.8rem, 1.727rem + 0.227vw, 2rem);
 		color: $c-green;
+		bottom: 0;
 	}
 
 	&__order {
