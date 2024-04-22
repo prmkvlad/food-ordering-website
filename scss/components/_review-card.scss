@@ -1,7 +1,10 @@
 .review-card {
 	box-sizing: border-box; //fix swiper content-box
 	max-width: 52rem;
+	min-height: clamp(35.5rem, 33.864rem + 5.114vw, 40rem);
 	padding-right: 5rem;
+	display: flex;
+	flex-direction: column;
 
 	@media (max-width: 767.98px) {
 		margin: 0 auto;
@@ -15,10 +18,28 @@
 		max-width: 37rem;
 	}
 
+	&__body {
+		flex: 1 1 auto;
+		margin-bottom: clamp(2rem, 1.636rem + 1.136vw, 3rem);
+	}
+
 	&__text {
+		max-height: 15rem;
+		overflow: hidden;
 		line-height: 1.9;
 		color: rgba($c-black, 0.5);
-		margin-bottom: clamp(2rem, 1.636rem + 1.136vw, 3rem);
+	}
+
+	.show-more-btn {
+		display: none;
+		margin: 0;
+		padding: 0;
+		background-color: #fff;
+		color: rgba($c-black, 0.5);
+		text-decoration: underline;
+		border: none;
+		cursor: pointer;
+		margin-top: 1rem;
 	}
 
 	&__info {

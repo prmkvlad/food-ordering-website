@@ -10,7 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			768: {
 				slidesPerView: 2,
 			}
-		}
+		},
+		on: {
+			slideChangeTransitionEnd: function () {
+				resetReviews();
+			},
+		},
 	});
 
 	// hero section burger background animation
@@ -34,6 +39,45 @@ document.addEventListener('DOMContentLoaded', () => {
 				burgerAnimationIsPlayed = true;
 			}
 		}
+	});
+
+	// reviews show more button
+
+	function resetReviews() {
+		reviews.forEach(review => {
+			const textContainer = review.querySelector('.review-card__text');
+			const text = review.querySelector('.review-card__text p');
+			const showMoreBtn = review.querySelector('.show-more-btn');
+
+			if (text.textContent.length > 300 && !review.classList.contains('swiper-slide-active')) {
+				textContainer.style.maxHeight = null;
+				textContainer.style.overflow = 'hidden';
+				showMoreBtn.textContent = 'Show More';
+			}
+		});
+	}
+
+	const reviews = document.querySelectorAll('.review-card');
+
+	reviews.forEach(review => {
+		const textContainer = review.querySelector('.review-card__text');
+		const text = review.querySelector('.review-card__text p');
+		const showMoreBtn = review.querySelector('.show-more-btn');
+
+		if (text.textContent.length > 300) {
+			showMoreBtn.style.display = 'inline-block';
+		}
+
+		showMoreBtn.addEventListener('click', function () {
+			if (textContainer.style.maxHeight) {
+				textContainer.style.maxHeight = null;
+				textContainer.style.overflow = 'hidden';
+			} else {
+				textContainer.style.maxHeight = 'none';
+				textContainer.style.overflow = 'visible';
+			}
+			showMoreBtn.textContent = textContainer.style.maxHeight ? 'Show Less' : 'Show More';
+		});
 	});
 });
 
