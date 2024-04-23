@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const swiper = new Swiper('.swiper', {
 		slidesPerView: 1,
+		autoHeight: true,
 		navigation: {
 			nextEl: '.reviews__arrow--next',
 			prevEl: '.reviews__arrow--prev',
@@ -10,12 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			768: {
 				slidesPerView: 2,
 			}
-		},
-		on: {
-			slideChangeTransitionEnd: function () {
-				resetReviews();
-			},
-		},
+		}
 	});
 
 	// hero section burger background animation
@@ -76,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				textContainer.style.maxHeight = 'none';
 				textContainer.style.overflow = 'visible';
 			}
+			swiper.updateAutoHeight();
 			showMoreBtn.textContent = textContainer.style.maxHeight ? 'Show Less' : 'Show More';
 		});
 	});
