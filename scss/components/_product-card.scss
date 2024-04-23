@@ -5,26 +5,24 @@
 	padding: 26rem 5rem 4rem;
 	transition: background-color 0.3s ease 0s;
 
+	&:hover {
+		background-color: $c-black;
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: $c-black;
+		.product-card__content {
+			transform: translateY(-7rem);
+		}
 
-			.product-card__content {
-				transform: translateY(-7rem);
-			}
+		.product-card__order {
+			opacity: 1;
+			pointer-events: all;
+		}
 
-			.product-card__order {
-				opacity: 1;
-			}
+		.product-card__name {
+			color: $c-white;
+		}
 
-			.product-card__name {
-				color: $c-white;
-			}
-
-			.product-card__img {
-				width: 90%;
-			}
+		.product-card__img {
+			width: 90%;
 		}
 	}
 
@@ -102,5 +100,6 @@
 		background-position: center right 4.4rem;
 		opacity: 0;
 		transition: opacity 0.3s ease 0s;
+		pointer-events: none;
 	}
 }
