@@ -342,8 +342,6 @@ body._lock {
   background-repeat: no-repeat;
   background-position: left 2rem center;
   background-size: 2.4rem;
-  /* for WebKit (Chrome, Safari) */
-  /* for Firefox */
 }
 .form__input--date {
   background-image: url("../img/icons/icon_chevron_down.svg"), url("../img/icons/icon_calendar.svg");
@@ -372,18 +370,6 @@ body._lock {
 }
 .form__input:focus::placeholder {
   color: transparent;
-}
-.form__input:-webkit-autofill, .form__input:-webkit-autofill:hover, .form__input:-webkit-autofill:focus, .form__input:-webkit-autofill:active {
-  -webkit-text-fill-color: rgba(255, 255, 255, 0.5) !important;
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-}
-.form__input:-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  -moz-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
 }
 .form__btn {
   display: block;

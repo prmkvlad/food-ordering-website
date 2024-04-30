@@ -59,23 +59,6 @@
 				color: transparent;
 			}
 		}
-
-		/* for WebKit (Chrome, Safari) */
-		&:-webkit-autofill,
-		&:-webkit-autofill:hover,
-		&:-webkit-autofill:focus,
-		&:-webkit-autofill:active {
-			-webkit-text-fill-color: rgba($c-white, 0.5) !important;
-			background-color: rgba($c-white, 0.2) !important;
-			transition: background-color 5000s ease-in-out 0s;
-		}
-
-		/* for Firefox */
-		&:-moz-placeholder {
-			color: rgba($c-white, 0.5) !important;
-			background-color: rgba($c-white, 0.2) !important;
-			transition: background-color 5000s ease-in-out 0s;
-		}
 	}
 
 	&__btn {
